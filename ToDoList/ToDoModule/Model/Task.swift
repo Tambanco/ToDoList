@@ -7,5 +7,5 @@
 
 import Foundation
 struct Task {
-    let task: String
+    var taskList: [String]
 }

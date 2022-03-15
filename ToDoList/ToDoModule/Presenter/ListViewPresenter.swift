@@ -11,24 +11,24 @@ import Foundation
 
 // MARK: Output protocol
 protocol ListViewViewProtocol: AnyObject {
-    func setTask(task: String)
+    func setList(taskList: [String])
 }
 
 // MARK: Input protocol
 protocol ListViewPresenterProtocol: AnyObject {
     init(view: ListViewViewProtocol, model:  Task)
-    func showtask()
+    func updateTasks(newTask: String)
 }
 
 class ListViewPresenter: ListViewPresenterProtocol {
     
-
+    
     weak var view: ListViewViewProtocol?
     var model: Task
     
-    func showtask() {
-        let task = "task"
-        self.view?.setTask(task: task)
+    func updateTasks(newTask: String) {
+        model.taskList.append(newTask)
+        self.view?.setList(taskList: model.taskList)
     }
     
     required init(view: ListViewViewProtocol, model: Task) {
