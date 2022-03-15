@@ -20,6 +20,7 @@
 		4967724727E0AB6A00EA37A6 /* ModuleBuilder.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4967724627E0AB6A00EA37A6 /* ModuleBuilder.swift */; };
 		4967724A27E0ABD300EA37A6 /* Task.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4967724927E0ABD300EA37A6 /* Task.swift */; };
 		4967724C27E0AE2900EA37A6 /* TableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4967724B27E0AE2900EA37A6 /* TableViewCell.swift */; };
+		4967724E27E0B53200EA37A6 /* ListView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4967724D27E0B53200EA37A6 /* ListView.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -57,6 +58,7 @@
 		4967724627E0AB6A00EA37A6 /* ModuleBuilder.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ModuleBuilder.swift; sourceTree = "<group>"; };
 		4967724927E0ABD300EA37A6 /* Task.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Task.swift; sourceTree = "<group>"; };
 		4967724B27E0AE2900EA37A6 /* TableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TableViewCell.swift; sourceTree = "<group>"; };
+		4967724D27E0B53200EA37A6 /* ListView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ListView.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -166,6 +168,7 @@
 			isa = PBXGroup;
 			children = (
 				4967723A27E0AABA00EA37A6 /* ListViewViewController.swift */,
+				4967724D27E0B53200EA37A6 /* ListView.swift */,
 				4967724B27E0AE2900EA37A6 /* TableViewCell.swift */,
 			);
 			path = View;
@@ -325,6 +328,7 @@
 				4967721127E0AA0800EA37A6 /* ToDoList.xcdatamodeld in Sources */,
 				4967724A27E0ABD300EA37A6 /* Task.swift in Sources */,
 				4967724727E0AB6A00EA37A6 /* ModuleBuilder.swift in Sources */,
+				4967724E27E0B53200EA37A6 /* ListView.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
