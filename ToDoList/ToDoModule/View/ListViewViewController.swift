@@ -12,7 +12,7 @@ import UIKit
 class ListViewViewController: UIViewController {
 
 	var presenter: ListViewPresenterProtocol!
-    @IBOutlet weak var tableView: UITableView!
+    var listTableView: UITableView!
     
 	override func viewDidLoad() {
         super.viewDidLoad()
@@ -21,23 +21,36 @@ class ListViewViewController: UIViewController {
     }
     
     func initTableView() {
-        tableView.registe
+        listTableView = UITableView()
+        listTableView.register(TableViewCell.self, forCellReuseIdentifier: TableViewCell.reuseId)
+        listTableView.dataSource = self
+        listTableView.delegate = self
+        
+        self.view.addSubview(listTableView)
+        listTableView.translatesAutoresizingMaskIntoConstraints = false
+        listTableView.centerXAnchor.constraint(equalTo: view.centerXAnchor).isActive = true
+        listTableView.centerYAnchor.constraint(equalTo: view.centerYAnchor).isActive = true
+        listTableView.heightAnchor.constraint(equalTo: view.heightAnchor, multiplier: 1).isActive = true
+        listTableView.widthAnchor.constraint(equalTo: view.widthAnchor, multiplier: 1).isActive = true
     }
 }
 
 // MARK: - Binding
 extension ListViewViewController: ListViewViewProtocol {
-    
+    func setTask(task: String) {
+        
+    }
 }
 
 // MARK: - TableView
 extension ListViewViewController: UITableViewDelegate, UITableViewDataSource {
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
-        return 0
+        return 5
     }
     
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
-        let cell = tableView.dequeueReusableCell(withIdentifier: "cell")
+        let cell = tableView.dequeueReusableCell(withIdentifier: TableViewCell.reuseId, for: indexPath) as! TableViewCell
+        cell.taskLabel.text = "task"
         return cell
     }
 }
